@@ -1,19 +1,21 @@
 using System;
 using System.Linq;
+using DatabaseSkeleton.Main;
+using DatabaseSkeleton.Main.Menu;
 using Persistence;
 
-namespace DatabaseSkeleton {
-    public class ShellViewModel : Caliburn.Micro.PropertyChangedBase, IShell{ 
-        public ShellViewModel()
+namespace DatabaseSkeleton
+{
+    public class ShellViewModel : Caliburn.Micro.PropertyChangedBase, IShell
+    {
+        public ShellViewModel(MenuViewModel Menu)
         {
-            var Factory = new Npgsql.NpgsqlConnectionFactory();
+            this.Menu = Menu;
 
-            Db.ConfigureMigrations();
-            using (var C = new Db())
-            {
-                var n = C.Client.Count();
-                n = n;
-            }
+
         }
+
+        public string Text { get; set; } = "Hola a todos";
+        public MenuViewModel Menu { get; private set; }
     }
 }
