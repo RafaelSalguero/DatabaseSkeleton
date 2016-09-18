@@ -8,7 +8,7 @@ namespace Persistence.Migrations
         public override void Up()
         {
             CreateTable(
-                "public.Client",
+                "public.Customer",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -32,7 +32,7 @@ namespace Persistence.Migrations
         public override void Down()
         {
             DropTable("public.Product");
-            DropTable("public.Client");
+            DropTable("public.Customer");
         }
     }
 }

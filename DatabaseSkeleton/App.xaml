@@ -9,6 +9,23 @@
                     <local:AppBootstrapper x:Key="bootstrapper" />
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
+
+             <!--For some reason styles doesn't work when added inside the inner resource dictionary,
+            we need to put them here:-->
+
+            <SolidColorBrush Color="#FFD63F3F" x:Key="DangerColor" />
+            <SolidColorBrush Color="#FF3FD684" x:Key="SucceedColor" />
+            <SolidColorBrush Color="#FF1F7BD6" x:Key="InfoColor" />
+            <SolidColorBrush Color="#FFF1B750" x:Key="WarningColor" />
+            
+            <SolidColorBrush Color="#eee" x:Key="GrayColor" />
+            <Style TargetType="Button" >
+                <Setter Property="Margin" Value="3" />
+                <Setter Property="Padding" Value="8,2,8,2" />
+                <Setter Property="MinWidth" Value="50" />
+            </Style>
         </ResourceDictionary>
+
+
     </Application.Resources>
 </Application>

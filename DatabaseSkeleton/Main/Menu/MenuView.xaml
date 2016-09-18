@@ -5,10 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DatabaseSkeleton.Main.Menu"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <Button x:Name="Hello" >
-            Hello
-        </Button>
-    </Grid>
+             d:DesignHeight="20" d:DesignWidth="300">
+    <Menu>
+        <MenuItem Header="Lists" >
+            <MenuItem Header="Products" />
+            <MenuItem Header="Customers" />
+        </MenuItem>
+        <MenuItem Header="Help">
+            <MenuItem Header="About"  x:Name="Hello" />
+        </MenuItem>
+    </Menu>
 </UserControl>

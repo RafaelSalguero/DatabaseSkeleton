@@ -12,7 +12,7 @@ namespace Persistence
 {
     public class Db : DbContext
     {
-        public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Product> Product { get; set; }
 
         public Db() : base("C1")

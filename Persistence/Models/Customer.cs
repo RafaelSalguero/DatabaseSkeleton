@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace Persistence.Models
 {
     /// <summary>
-    /// Client model
+    /// Customer model
     /// </summary>
-    public class Client
+    public class Customer
     {
         [Key]
         public int Id { get; set; }
